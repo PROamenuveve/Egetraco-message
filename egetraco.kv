@@ -2,20 +2,32 @@ MenuPrincipal:
     # Screen:
     #     name:"Parametre"
     #     Parametre:
-    Screen:
+    MDScreen:
+        name:"Messages"
+        Messages:
+        # MDBottomSheet:
+        #     id: bottom_sheet
+        #     type: "standard"
+        #     bg_color: "grey"
+        #     default_opening_height:dp(0)
+        #     size_hint_y: None
+        #     height:dp(8000)
+
+        
+    MDScreen:
         name:"Message"
         Message:
-    Screen:
+    MDScreen:
         id:ss
         name:"Personne"
         Personne:
-    Screen:
+    MDScreen:
         name:"Parametre"
         Parametre:
-    Screen:
+    MDScreen:
         name:"Recherche"
         Recherche:
-    Screen:
+    MDScreen:
         id:ss
         name:"Profile"
         Profile:
@@ -23,30 +35,111 @@ MenuPrincipal:
 
 <Click>:
     
-    on_press:root.parent.parent.unselected_all() if root.parent.parent.parent.parent.ok  else None,root.parent.parent.parent.parent.unselected(),root.parent.parent.parent.parent.parent.parent.push("Personne") if root.parent.parent.parent.parent.ok  else None
+    on_press:root.parent.parent.parent.parent.parent.push("Personne")
+    
+    #  root.parent.parent.unselected_all() ,
+#if root.parent.parent.parent.parent.ok  else None
+# ,root.parent.parent.parent.parent.unselected()
+#if root.parent.parent.parent.parent.ok  else None
+<Entete>:
+    on_parent:root.parente()#,print("parent11111111111111")
+    id:tool
+    size_hint:1,None
+    height:dp(60)
+    md_bg_color: .2,.7,.25,1
+    elevation:2
+    pos_hint_y:"top"
+    MDScreen:
+        id:tool_bar
+        MDLabel:
+            id:labele
+            size_hint_x:None
+            adaptive_width:True
+            bold:True
+            font_size:dp(20)
+            text: "EGETRACO"
+            pos_hint: {"center_x": .3, "center_y": .5}
+        MDIconButton:
+            id:magnify
+            icon: "magnify"
+            pos_hint: {"center_x": .7, "center_y": .5}
+            on_press:root.tools("recherche")
+        MDIconButton:
+            id:vertical
+            icon: "dots-vertical"
+            pos_hint: {"center_x": .9, "center_y": .5}
+            on_press:root.parent.callback(vertical)
+    MDCard:
+        id:tool_recherche
+        size_hint:1,1#None
+        # height:dp(50)
+        md_bg_color: .3,.8,.25,1
+        elevation:2
+        radius:(dp(0), dp(0), dp(0), dp(0))
+        MDIconButton:
+            theme_icon_color: "Custom"
+            icon_color:1,1,1,1
+            icon:"close"
+            pos_hint: {"center_x": 0.1, "center_y": .5}
+            on_press:root.tools("tool_bar")
+        MDTextField:
+            id:recherche
+            size_hint:1, .5
+            # width: self.width*9/10
+            mode: "round"
+            icon_right: "magnify"
+            hint_text: "recherche"
+            line_color_focus: "#888888"
+            helper_text_mode: "on_focus"
+            icon_right_color_focus: "#888888"
+            text_color_focus: "#444444"
+            pos_hint: { "center_y": .5}
+
+        MDLabel:
+            size_hint_x:None
+            width: dp(10)
+<Messages>:
+    id:mesg
+    orientation: 'vertical'
+    on_parent:root.parente()#,tool.parente()
+    Entete:
+
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        effect_cls: "ScrollEffect"
+        smooth_scroll_end: dp(10)
+        MDBoxLayout:
+            id: list_de_messages
+            orientation: "vertical"
+            size_hint:1, None
+            adaptive_height: True
 
 <Message>:
     id:mesg
     orientation: 'vertical'
     on_parent:root.parente()
-    MDTopAppBar:
-        id:bar
-        md_bg_color: .2,.7,.25,1
-        title:"EGETRACO"
-        right_action_items: [["magnify", lambda x:root.parent.parent.push("Recherche") ,"recherche"], ["dots-vertical", lambda x: root.callback(x),"plus"]]
-        left_action_items:[]
-        opposite_colors: True
-        elevation:2
+    # MDTopAppBar:
+    #     id:bar
+    #     md_bg_color: .2,.7,.25,1
+    #     title:"EGETRACO"
+    #     right_action_items: [["magnify", lambda x:root.parent.parent.push("Recherche") ,"recherche"], ["dots-vertical", lambda x: root.callback(x),"plus"]]
+    #     left_action_items:[]
+    #     opposite_colors: True
+    #     elevation:2
     MDScreen:
         id:tool
         size_hint:1,None
         height:dp(60)
         md_bg_color: .2,.7,.25,1
+        elevation:2
         MDIconButton:
             id:anuler
-            icon: ""
-            pos_hint: {"center_x": .15, "center_y": .5}
-            on_press:root.parent.parent.push("Recherche")
+            icon:"close"
+            theme_icon_color: "Custom"
+            icon_color:.2,.7,.25,1
+            pos_hint: {"center_x": 0.1, "center_y": .5}
+            # on_press:root.parent.parent.push("Recherche") 
         MDLabel:
             id:labele
             size_hint_x:None
@@ -132,7 +225,7 @@ MenuPrincipal:
                 height:dp(50)
                 width: dp(50)
                 radius:dp(25)
-                source:"0f8069cb4af6b4d61547e505691762e4.jpg"
+                source:"image/0f8069cb4af6b4d61547e505691762e4.jpg"
                 # on_touch_up:root.parent.parent.pop()
         MDIconButton:
             icon: "phone"
@@ -150,6 +243,8 @@ MenuPrincipal:
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
+            effect_cls: "ScrollEffect"
+            smooth_scroll_end: dp(10)
             MDBoxLayout:
                 orientation:'vertical'
                 id:Les_Message
@@ -231,6 +326,8 @@ MenuPrincipal:
     ScrollView:
         do_scroll_x:False
         do_scroll_y:True
+        effect_cls: "ScrollEffect"
+        smooth_scroll_end: dp(10)
         MDBoxLayout:
             orientation: "vertical"
             size_hint: 1, None
@@ -314,8 +411,7 @@ MenuPrincipal:
     MDBoxLayout:
         size_hint:1, None
         height:dp(40)
-        md_bg_color:"#77BB77"
-        
+        md_bg_color:app.theme_cls.primary_dark #"#77BB77"
         MDIconButton:
             icon:"arrow-left"
             on_press:root.parent.parent.pop()
@@ -336,14 +432,17 @@ MenuPrincipal:
 <Parametre>:
     MDBoxLayout:
         orientation: 'vertical'
+        md_bg_color:app.theme_cls.primary_color
         MDScreen:
             size_hint:1, None
             height:dp(40)
+            md_bg_color:app.theme_cls.primary_color
+            # opacity:.5
             MDLabel:
                 size_hint:None, None
                 height:dp(30)
-                width:dp(100)
-                text:"profile"
+                width:dp(110)
+                text:"parametre"
                 font_size:dp(22)
                 bold:True
                 pos_hint:{'center_x':.7, 'center_y':.3}
@@ -355,13 +454,19 @@ MenuPrincipal:
         ScrollView:
             do_scroll_x:False
             do_scroll_y:True
+            # effect_cls: ScrollEffect
+            effect_cls: "ScrollEffect"
+            smooth_scroll_end: dp(10)
+            # ScrollEffect:True
             MDBoxLayout:
                 orientation: "vertical"
+                # md_bg_color:app.theme_cls.primary_color
                 size_hint: 1, None
                 adaptive_height: True
                 MDScreen:
                     size_hint:1, None
                     height:dp(110)
+                    md_bg_color:app.theme_cls.primary_color
                     # MDLabel:
                     #     size_hint:None, None
                     #     height:dp(30)
@@ -381,7 +486,7 @@ MenuPrincipal:
                         height:dp(100)
                         width:dp(100)
                         pos_hint:{'center_x':.3, 'center_y':.5}
-                        source:"0f8069cb4af6b4d61547e505691762e4.jpg"
+                        source:"image/0f8069cb4af6b4d61547e505691762e4.jpg"
                         radius:dp(50)
                         # md_bg_color: "red"
                     MDLabel:
@@ -398,45 +503,43 @@ MenuPrincipal:
                         text: "prenom"
                         pos_hint:{'center_x':.8, 'center_y':.35}
                         # md_bg_color: "red"
+                MDBoxLayout:
+                    orientation: "vertical"
+                    size_hint: 1, None
+                    adaptive_height: True
+                    md_bg_color:"#FFFFFF"
+                    MDSeparator:
+                        orientation:'horizontal'
+                        height: "2dp"
+                    MDSeparator:
+                        orientation:'horizontal'
+                        height: "3dp"
+                    TwoLineListItem:
+                        text: "numero de telehones"
+                        secondary_text: "non definie"
+                    TwoLineListItem:
+                        text: "adress emails"
+                        secondary_text: "non definie"
+                    TwoLineListItem:
+                        text: "adress locales"
+                        secondary_text: "non definie"
+                    TwoLineListItem:
+                        text: " les amies "
+                        secondary_text: "les amies "      
+                    TwoLineListItem:
+                        text: "notifications "
+                        secondary_text: "notifications  des messages" 
+                    TwoLineListItem:
+                        text: "discutions "
+                        secondary_text: "nom definie "   
 
-                MDSeparator:
-                    orientation:'horizontal'
-                    height: "2dp"
-                # MDBoxLayout:
-                #     size_hint:1,None
-                #     adaptive_height: True
-                #     orientation: 'vertical'
-                #     MDLabel:
-                #         size_hint:1, None
-                #         height:dp(30)
-                #         text: "numero de telehone"
-                #         pos_hint:{'center_x':.8, 'center_y':.1}
-                #     MDLabel:
-                #         size_hint:1, None
-                #         height:dp(30)
-                #         text: "nom definis"
-                #         pos_hint:{'center_x':.8, 'center_y':.1}
-                MDSeparator:
-                    orientation:'horizontal'
-                    height: "3dp"
-                TwoLineListItem:
-                    text: "numero de telehones"
-                    secondary_text: "non definie"
-                TwoLineListItem:
-                    text: "adress emails"
-                    secondary_text: "non definie"
-                TwoLineListItem:
-                    text: "adress locales"
-                    secondary_text: "non definie"
-                TwoLineListItem:
-                    text: " les amies "
-                    secondary_text: "les amies "      
-                TwoLineListItem:
-                    text: "notifications "
-                    secondary_text: "notifications  des messages" 
-                TwoLineListItem:
-                    text: "discutions "
-                    secondary_text: "nom definie "   
-                MDSeparator:
-                    orientation:'horizontal'
-                    height: "3dp"
+                    TwoLineListItem:
+                        text: "discutions "
+                        secondary_text: "nom definie "  
+
+                    TwoLineListItem:
+                        text: "discutions "
+                        secondary_text: "nom definie "  
+                    MDSeparator:
+                        orientation:'horizontal'
+                        height: "3dp"
