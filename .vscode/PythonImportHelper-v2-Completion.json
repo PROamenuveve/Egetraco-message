@@ -1,0 +1,757 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "kivy",
+        "description": "kivy",
+        "isExtraImport": true,
+        "detail": "kivy",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Builder",
+        "importPath": "kivy.lang",
+        "description": "kivy.lang",
+        "isExtraImport": true,
+        "detail": "kivy.lang",
+        "documentation": {}
+    },
+    {
+        "label": "Window",
+        "importPath": "kivy.core.window",
+        "description": "kivy.core.window",
+        "isExtraImport": true,
+        "detail": "kivy.core.window",
+        "documentation": {}
+    },
+    {
+        "label": "MDFileManager",
+        "importPath": "kivymd.uix.filemanager",
+        "description": "kivymd.uix.filemanager",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.filemanager",
+        "documentation": {}
+    },
+    {
+        "label": "toast",
+        "importPath": "kivymd.toast",
+        "description": "kivymd.toast",
+        "isExtraImport": true,
+        "detail": "kivymd.toast",
+        "documentation": {}
+    },
+    {
+        "label": "MDApp",
+        "importPath": "kivymd.app",
+        "description": "kivymd.app",
+        "isExtraImport": true,
+        "detail": "kivymd.app",
+        "documentation": {}
+    },
+    {
+        "label": "plyer",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plyer",
+        "description": "plyer",
+        "detail": "plyer",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "importPath": "plyer",
+        "description": "plyer",
+        "isExtraImport": true,
+        "detail": "plyer",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Widget",
+        "importPath": "kivy.uix.widget",
+        "description": "kivy.uix.widget",
+        "isExtraImport": true,
+        "detail": "kivy.uix.widget",
+        "documentation": {}
+    },
+    {
+        "label": "Popup",
+        "importPath": "kivy.uix.popup",
+        "description": "kivy.uix.popup",
+        "isExtraImport": true,
+        "detail": "kivy.uix.popup",
+        "documentation": {}
+    },
+    {
+        "label": "BoxLayout",
+        "importPath": "kivy.uix.boxlayout",
+        "description": "kivy.uix.boxlayout",
+        "isExtraImport": true,
+        "detail": "kivy.uix.boxlayout",
+        "documentation": {}
+    },
+    {
+        "label": "MDBoxLayout",
+        "importPath": "kivymd.uix.boxlayout",
+        "description": "kivymd.uix.boxlayout",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.boxlayout",
+        "documentation": {}
+    },
+    {
+        "label": "ScreenManager",
+        "importPath": "kivy.uix.screenmanager",
+        "description": "kivy.uix.screenmanager",
+        "isExtraImport": true,
+        "detail": "kivy.uix.screenmanager",
+        "documentation": {}
+    },
+    {
+        "label": "Screen",
+        "importPath": "kivy.uix.screenmanager",
+        "description": "kivy.uix.screenmanager",
+        "isExtraImport": true,
+        "detail": "kivy.uix.screenmanager",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "importPath": "kivy.metrics",
+        "description": "kivy.metrics",
+        "isExtraImport": true,
+        "detail": "kivy.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "importPath": "kivy.metrics",
+        "description": "kivy.metrics",
+        "isExtraImport": true,
+        "detail": "kivy.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "get_color_from_hex",
+        "importPath": "kivy.utils",
+        "description": "kivy.utils",
+        "isExtraImport": true,
+        "detail": "kivy.utils",
+        "documentation": {}
+    },
+    {
+        "label": "NumericProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "Clock",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "BooleanProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "StringProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "StringProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "NumericProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "BooleanProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "IconLeftWidget",
+        "importPath": "kivymd.uix.list",
+        "description": "kivymd.uix.list",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.list",
+        "documentation": {}
+    },
+    {
+        "label": "TwoLineIconListItem",
+        "importPath": "kivymd.uix.list",
+        "description": "kivymd.uix.list",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.list",
+        "documentation": {}
+    },
+    {
+        "label": "OneLineListItem",
+        "importPath": "kivymd.uix.list",
+        "description": "kivymd.uix.list",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.list",
+        "documentation": {}
+    },
+    {
+        "label": "TwoLineListItem",
+        "importPath": "kivymd.uix.list",
+        "description": "kivymd.uix.list",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.list",
+        "documentation": {}
+    },
+    {
+        "label": "OneLineListItem",
+        "importPath": "kivymd.uix.list",
+        "description": "kivymd.uix.list",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.list",
+        "documentation": {}
+    },
+    {
+        "label": "TwoLineAvatarListItem",
+        "importPath": "kivymd.uix.list",
+        "description": "kivymd.uix.list",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.list",
+        "documentation": {}
+    },
+    {
+        "label": "MDDialog",
+        "importPath": "kivymd.uix.dialog",
+        "description": "kivymd.uix.dialog",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.dialog",
+        "documentation": {}
+    },
+    {
+        "label": "MDFlatButton",
+        "importPath": "kivymd.uix.button",
+        "description": "kivymd.uix.button",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.button",
+        "documentation": {}
+    },
+    {
+        "label": "MDIconButton",
+        "importPath": "kivymd.uix.button",
+        "description": "kivymd.uix.button",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.button",
+        "documentation": {}
+    },
+    {
+        "label": "TouchBehavior",
+        "importPath": "kivymd.uix.behaviors",
+        "description": "kivymd.uix.behaviors",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.behaviors",
+        "documentation": {}
+    },
+    {
+        "label": "MDDropdownMenu",
+        "importPath": "kivymd.uix.menu",
+        "description": "kivymd.uix.menu",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.menu",
+        "documentation": {}
+    },
+    {
+        "label": "MDDropdownMenu",
+        "importPath": "kivymd.uix.menu",
+        "description": "kivymd.uix.menu",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.menu",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "kivy.logger",
+        "description": "kivy.logger",
+        "isExtraImport": true,
+        "detail": "kivy.logger",
+        "documentation": {}
+    },
+    {
+        "label": "CompoundSelectionBehavior",
+        "importPath": "kivy.uix.behaviors.compoundselection",
+        "description": "kivy.uix.behaviors.compoundselection",
+        "isExtraImport": true,
+        "detail": "kivy.uix.behaviors.compoundselection",
+        "documentation": {}
+    },
+    {
+        "label": "MDTextField",
+        "importPath": "kivymd.uix.textfield",
+        "description": "kivymd.uix.textfield",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.textfield",
+        "documentation": {}
+    },
+    {
+        "label": "MDListBottomSheet",
+        "importPath": "kivymd.uix.bottomsheet",
+        "description": "kivymd.uix.bottomsheet",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.bottomsheet",
+        "documentation": {}
+    },
+    {
+        "label": "MDBottomSheet",
+        "importPath": "kivymd.uix.bottomsheet",
+        "description": "kivymd.uix.bottomsheet",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.bottomsheet",
+        "documentation": {}
+    },
+    {
+        "label": "MDListBottomSheet",
+        "importPath": "kivymd.uix.bottomsheet",
+        "description": "kivymd.uix.bottomsheet",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.bottomsheet",
+        "documentation": {}
+    },
+    {
+        "label": "MDGridBottomSheet",
+        "importPath": "kivymd.uix.bottomsheet",
+        "description": "kivymd.uix.bottomsheet",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.bottomsheet",
+        "documentation": {}
+    },
+    {
+        "label": "MDBottomSheet",
+        "importPath": "kivymd.uix.bottomsheet",
+        "description": "kivymd.uix.bottomsheet",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.bottomsheet",
+        "documentation": {}
+    },
+    {
+        "label": "MDSmartTile",
+        "importPath": "kivymd.uix.imagelist",
+        "description": "kivymd.uix.imagelist",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.imagelist",
+        "documentation": {}
+    },
+    {
+        "label": "MDLabel",
+        "importPath": "kivymd.uix.label",
+        "description": "kivymd.uix.label",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.label",
+        "documentation": {}
+    },
+    {
+        "label": "MDLabel",
+        "importPath": "kivymd.uix.label",
+        "description": "kivymd.uix.label",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.label",
+        "documentation": {}
+    },
+    {
+        "label": "MDCard",
+        "importPath": "kivymd.uix.card",
+        "description": "kivymd.uix.card",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.card",
+        "documentation": {}
+    },
+    {
+        "label": "MDCardSwipe",
+        "importPath": "kivymd.uix.card",
+        "description": "kivymd.uix.card",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.card",
+        "documentation": {}
+    },
+    {
+        "label": "MDFloatLayout",
+        "importPath": "kivymd.uix.floatlayout",
+        "description": "kivymd.uix.floatlayout",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.floatlayout",
+        "documentation": {}
+    },
+    {
+        "label": "MDFloatLayout",
+        "importPath": "kivymd.uix.floatlayout",
+        "description": "kivymd.uix.floatlayout",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.floatlayout",
+        "documentation": {}
+    },
+    {
+        "label": "MDScrollView",
+        "importPath": "kivymd.uix.scrollview",
+        "description": "kivymd.uix.scrollview",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.scrollview",
+        "documentation": {}
+    },
+    {
+        "label": "MDScreen",
+        "importPath": "kivymd.uix.screen",
+        "description": "kivymd.uix.screen",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.screen",
+        "documentation": {}
+    },
+    {
+        "label": "Snackbar",
+        "importPath": "kivymd.uix.snackbar",
+        "description": "kivymd.uix.snackbar",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.snackbar",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "kivy.uix.button",
+        "description": "kivy.uix.button",
+        "isExtraImport": true,
+        "detail": "kivy.uix.button",
+        "documentation": {}
+    },
+    {
+        "label": "Label",
+        "importPath": "kivy.uix.label",
+        "description": "kivy.uix.label",
+        "isExtraImport": true,
+        "detail": "kivy.uix.label",
+        "documentation": {}
+    },
+    {
+        "label": "FitImage",
+        "importPath": "kivymd.uix.fitimage",
+        "description": "kivymd.uix.fitimage",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.fitimage",
+        "documentation": {}
+    },
+    {
+        "label": "Animation",
+        "importPath": "kivy.animation",
+        "description": "kivy.animation",
+        "isExtraImport": true,
+        "detail": "kivy.animation",
+        "documentation": {}
+    },
+    {
+        "label": "MDScreenManager",
+        "importPath": "kivymd.uix.screenmanager",
+        "description": "kivymd.uix.screenmanager",
+        "isExtraImport": true,
+        "detail": "kivymd.uix.screenmanager",
+        "documentation": {}
+    },
+    {
+        "label": "AKAlertDialog",
+        "importPath": "akivymd.uix.dialogs",
+        "description": "akivymd.uix.dialogs",
+        "isExtraImport": true,
+        "detail": "akivymd.uix.dialogs",
+        "documentation": {}
+    },
+    {
+        "label": "AKDatePicker",
+        "importPath": "akivymd.uix.datepicker",
+        "description": "akivymd.uix.datepicker",
+        "isExtraImport": true,
+        "detail": "akivymd.uix.datepicker",
+        "documentation": {}
+    },
+    {
+        "label": "les_donners",
+        "importPath": "recuperation",
+        "description": "recuperation",
+        "isExtraImport": true,
+        "detail": "recuperation",
+        "documentation": {}
+    },
+    {
+        "label": "La_base_de_donner",
+        "importPath": "base_de_donner",
+        "description": "base_de_donner",
+        "isExtraImport": true,
+        "detail": "base_de_donner",
+        "documentation": {}
+    },
+    {
+        "label": "La_base_de_donner",
+        "kind": 6,
+        "importPath": "base_de_donner",
+        "description": "base_de_donner",
+        "peekOfCode": "class La_base_de_donner:\n    nom = \"\"\n    prenom = \"\"\n    age = \"nom definis\"\n    numero_de_telephone = \"\"\n    sexe = \"non definie\"\n    les_utiisateurs  = []\n    def __init__(self) :\n        try:\n            with open (\"utilisateurs.json\",\"r\") as f:",
+        "detail": "base_de_donner",
+        "documentation": {}
+    },
+    {
+        "label": "PageInscription",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class PageInscription(MDScreen):\n    titre = StringProperty()\n    test = StringProperty()\n    nom = StringProperty()\n    prenom = StringProperty()\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n    def suivant(self):\n        self.nom =  self.ids.nom.text\n        self.prenom = self.ids.prenom.text",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Information",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Information(MDScreen):\n    utilisateur = []\n    def __init__(self,**kw):\n        super().__init__(**kw)\n        self.date = AKDatePicker(callback=self.datte)\n        self.date.max_year = 2023\n    def datte(self,date):\n        if not date :\n            return\n        self.ids.date.text = \"%d / %d / %d\" % (date.day, date.month, date.year)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Utilisateur",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Utilisateur():\n    nom = \"\"\n    prenom = \"\"\n    age = \"nom definis\"\n    numero_de_telephone = \"\"\n    sexe = \"non definie\"\n    les_utiisateurs  = []\n    def __init__(self) :\n        info = Information().utilisateur\n        print(info)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Connection",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Connection(MDScreen):\n    pass\nclass MotsDePasseOublier(MDScreen):\n    pass\nclass MotsDePasse(MDScreen):\n    def suivant(self):\n        motsA = self.ids.motsA.text\n        motsB = self.ids.motsB.text\n        if len(motsA ) <=7:\n            self.ids.motsA.error =True",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "MotsDePasseOublier",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MotsDePasseOublier(MDScreen):\n    pass\nclass MotsDePasse(MDScreen):\n    def suivant(self):\n        motsA = self.ids.motsA.text\n        motsB = self.ids.motsB.text\n        if len(motsA ) <=7:\n            self.ids.motsA.error =True\n            self.ids.motsA.helper_text = \"entre un mots de passe avec plus 8 caracters\"\n            self.ids.btn.shake()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "MotsDePasse",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MotsDePasse(MDScreen):\n    def suivant(self):\n        motsA = self.ids.motsA.text\n        motsB = self.ids.motsB.text\n        if len(motsA ) <=7:\n            self.ids.motsA.error =True\n            self.ids.motsA.helper_text = \"entre un mots de passe avec plus 8 caracters\"\n            self.ids.btn.shake()\n        else:\n            if motsA ==  motsB:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "MenuPrincipal",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MenuPrincipal(MDScreenManager):\n    Personne_utiisateur = []\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.screens_name = \"Messages\"\n        # self.transition.duration = .2\n        # try:\n        #     with open (\"Personne_utiisateu.json\",\"r\") as f:\n        #         self.Personne_utiisateur  = json.load(f)\n        # except: ",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "MessageItem",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MessageItem(MDCard):\n    nom = StringProperty()\n    prenom = StringProperty()\n    message = StringProperty()\n    nmessage = StringProperty()\n    date = StringProperty()\n    image = StringProperty()\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n    def renvoie(self,txt):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Entet",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Entete  (MDScreen):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.tool = \"init\"\n        self.radius = (\"0dp\",\"0dp\",\"10dp\",\"10dp\")\n    def parente(self): \n        self.tools(self.tool) \n    def  go(self):\n        print(\"go\")\n    def tools(self,typ):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Messages",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Messages(MDBoxLayout):\n    laListe = []\n    donner = []\n    items = []\n    mode = \"\"\n    photo = \"\"\n    nom = \"\"\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.dialog = MDDialog()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Message(MDBoxLayout):\n    selection_list = []\n    li = []\n    appui = True\n    ok = True\n    overlay_color = get_color_from_hex(\"#66EE88\")\n    def parente ( self):\n        d = les_donners().get_donner()\n        for i in d:\n            nom= i[\"nom\"]",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Profile(MDBoxLayout):\n    photo = StringProperty()\n    nom = StringProperty()\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.photo = \"\"\n        self.nom = \"\"\n    def tof(self,p,n):\n        self.photo = p\n        self.nom = n",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "LesMessage",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class LesMessage(MDBoxLayout):\n    personne = StringProperty()\n    message = StringProperty()\n    # date = NumericProperty()\n    suiprimer= BooleanProperty()\nclass Personne(MDBoxLayout):\n    clef = StringProperty()\n    photo = StringProperty()\n    message = StringProperty()\n    info = StringProperty()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Personne",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Personne(MDBoxLayout):\n    clef = StringProperty()\n    photo = StringProperty()\n    message = StringProperty()\n    info = StringProperty()\n    date = StringProperty()\n    suiprimer= BooleanProperty()\n    laListe = []\n    nom = StringProperty(\"\")\n    inf = StringProperty()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Click",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Click(MDCard,Button):\n    def renvoie(self,txt):\n        Personne().appeler(txt)\n        print(txt)\nclass Recherche(MDBoxLayout):\n    pass\nclass SuperDialog(Popup,MDBoxLayout):\n    pass\nclass Parametre(MDBoxLayout,Utilisateur):\n    nom = StringProperty()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Recherche",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Recherche(MDBoxLayout):\n    pass\nclass SuperDialog(Popup,MDBoxLayout):\n    pass\nclass Parametre(MDBoxLayout,Utilisateur):\n    nom = StringProperty()\n    prenom = StringProperty()\n    numero_de_telephone= StringProperty()\n    adress_email = StringProperty()\n    adress_local = StringProperty()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "SuperDialog",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class SuperDialog(Popup,MDBoxLayout):\n    pass\nclass Parametre(MDBoxLayout,Utilisateur):\n    nom = StringProperty()\n    prenom = StringProperty()\n    numero_de_telephone= StringProperty()\n    adress_email = StringProperty()\n    adress_local = StringProperty()\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Parametre",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Parametre(MDBoxLayout,Utilisateur):\n    nom = StringProperty()\n    prenom = StringProperty()\n    numero_de_telephone= StringProperty()\n    adress_email = StringProperty()\n    adress_local = StringProperty()\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.nom =\"NOSSI\"\n        self.prenom =\"komlan\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Modifications",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Modifications(MDBoxLayout):\n    nom = StringProperty()\n    prenom = StringProperty()\n    numero_de_telephone= StringProperty()\n    adress_email = StringProperty()\n    adress_local = StringProperty()\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.nom =\"NOSSI\"\n        self.prenom =\"komlan\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "EgetracoApp",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class EgetracoApp(MDApp):\n    def __init__(self, **kwargs):\n        super().__init__(**kwargs)\n        # self.name = \"E-Message\"\n        self.theme_cls.theme_style =\"Light\"#\"Dark\"\n        self.theme_cls.primary_palette = \"Green\"\n        self.theme_cls.primary_hue = \"A700\"\n    def theme(self):\n        if self.theme_cls.theme_style == \"Dark\":\n            self.theme_cls.theme_style = \"Light\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "KV",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "KV = '''\n<Content>\n    orientation: \"vertical\"\n    spacing: \"12dp\"\n    size_hint_y: None\n    height: \"120dp\"\n    MDTextField:\n        hint_text: \"nom\"\n    MDTextField:\n        hint_text: \"prenom\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "les_donners",
+        "kind": 6,
+        "importPath": "recuperation",
+        "description": "recuperation",
+        "peekOfCode": "class les_donners:\n    nom = \"\"\n    personne = \"\"\n    date = 0\n    suprimer = False\n    mon_profile = []\n    les_amies = []\n    donner = []\n    perso_liste = []\n    def __init__(self):",
+        "detail": "recuperation",
+        "documentation": {}
+    }
+]

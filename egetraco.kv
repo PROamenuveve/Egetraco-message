@@ -1,19 +1,25 @@
 MenuPrincipal:
-    # Screen:
-    #     name:"Parametre"
-    #     Parametre:
     MDScreen:
         name:"Messages"
         Messages:
-        # MDBottomSheet:
-        #     id: bottom_sheet
-        #     type: "standard"
-        #     bg_color: "grey"
-        #     default_opening_height:dp(0)
-        #     size_hint_y: None
-        #     height:dp(8000)
-
-        
+    MDScreen:
+        name:"PageInscription"
+        PageInscription:
+    MDScreen:
+        name:"MotsDePasseOublier"
+        MotsDePasseOublier:
+    MDScreen:
+        name:"Connection"
+        Connection:
+    MDScreen:
+        name:"MotsDePasse"
+        MotsDePasse:
+    MDScreen:
+        name:"Information"
+        Information:
+    # MDScreen:
+    #     name:"Messages"
+    #     Messages:
     MDScreen:
         name:"Message"
         Message:
@@ -21,6 +27,7 @@ MenuPrincipal:
         id:ss
         name:"Personne"
         Personne:
+            id:prs
     MDScreen:
         name:"Parametre"
         Parametre:
@@ -28,15 +35,342 @@ MenuPrincipal:
         name:"Recherche"
         Recherche:
     MDScreen:
-        id:ss
+        id:profile
         name:"Profile"
         Profile:
+    MDScreen:
+        name:"Modifications"
+        Modifications:
+
+<ChampText@MDTextField>:
+    size_hint_x:.8
+    helper_text_mode: "on_error"
+    mode: "round"
+    line_color_normal: app.theme_cls.primary_color
+    line_anim:True
+    error_color:"red"
+    text_color_normal:"black"
+    text_color_focus:"black"
+    
+<Buttom@MagicBehavior+MDFillRoundFlatButton>:
+    id:btn
+<PageInscription>
+    MDLabel:
+        text: "Bienvenue"
+        font_size:dp(30)
+        bold:True
+        pos_hint:{"center_x":.5, "center_y":.9}
+        halign:"center"
+        color:app.theme_cls.primary_color
+        
+    MDLabel:
+        text: "veiller vous inscrire"
+        font_size:dp(20)
+        pos_hint:{"center_x":.45, "center_y":.65}
+        halign:"center"
+        # color:app.theme_cls.primary_color
+    ChampText:
+        id:nom
+        size_hint_x:.8
+        hint_text: "nom"
+        mode: "round"
+        error_color:"red"
+        pos_hint:{"center_x":.5, "center_y":.58}
+    ChampText:
+        id:prenom
+        size_hint_x:.8
+        hint_text: "prenom"
+        mode: "round"
+        pos_hint:{"center_x":.5, "center_y":.46}
+    MDTextButton:
+        text:"j ai deja un compte"
+        custom_color: app.theme_cls.primary_color
+        pos_hint:{"center_x":.3, "center_y":.35}
+        color: app.theme_cls.primary_color
+        on_release:root.parent.parent.push("Connection")
+    Buttom:
+        id:btn
+        size_hint_x:.8
+        text:"suivant"
+        color:"#FFFFFF"
+        font_size:dp(20)
+        color:"with"
+        md_bg_color:app.theme_cls.primary_color
+        pos_hint:{"center_x":.5, "center_y":.1}
+        on_release:root.suivant()#,self.shake(),root.parent.parent.push("Information")
+
+<Information>:
+    MDLabel:
+        text: "veiller entre votre age et votre numero de telephone"
+        font_size:dp(26)
+        bold:True
+        pos_hint:{"center_x":.5, "center_y":.82}
+        halign:"center"
+        color:app.theme_cls.primary_color
+    ChampText:
+        id:numero
+        size_hint_x:.8
+        hint_text: "numero de telephone"
+        mode: "round"
+        input_type: 'number'
+        pos_hint:{"center_x":.5, "center_y":.52}
+        line_color_normal: app.theme_cls.primary_color
+        line_anim:True
+        error_color:"red"
+        text_color_normal:"black"
+        text_color_focus:"black"
+    ChampText:
+        id:age
+        size_hint_x:.8
+        hint_text: "age"
+        helper_text_mode: "on_error"
+        mode: "round"
+        input_type: 'number'
+        pos_hint:{"center_x":.5, "center_y":.62}
+        line_color_normal: app.theme_cls.primary_color
+        line_anim:True
+        error_color:"red"
+        text_color_normal:"black"
+        text_color_focus:"black"
+    MDScreen:
+        size_hint_y:None
+        height:dp(20)
+        md_bg_color:"#EEEEEE"
+        pos_hint:{ "center_y":.4}
+        MDLabel:
+            text: "sexe"
+            pos_hint:{"center_x":.5, "center_y":.5}
+            halign:"center"
+    MDBoxLayout:
+        pos_hint:{ "center_y":.35}
+        size_hint_y:None
+        height:dp(30)
+        MDLabel:
+            text: "homme"
+            halign:"left"
+            halign:"center"
+        MDCheckbox:
+            id:homme
+            size_hint_x:None
+            width:self.width
+            active: True
+            pos_hint: { 'center_y': .5}
+            group: 'group'
+            size_hint: None, None
+            size: dp(48), dp(48)
+        MDLabel:
+            text: "femme"
+            # pos_hint:{"center_x":.58, "center_y":.4}
+            halign:"center"
+        MDCheckbox:
+            id:femme
+            size_hint_x:None
+            width:self.width
+            group: 'group'
+            size_hint: None, None
+            size: dp(48), dp(48)
+            pos_hint: {'center_y': .5}
+
+    Buttom:
+        id:btn
+        size_hint_x:.8
+        text:"suivant"
+        color:"#FFFFFF"
+        font_size:dp(20)
+        md_bg_color:app.theme_cls.primary_color
+        pos_hint:{"center_x":.5, "center_y":.1}
+        on_release:on_release:root.suivant()
+    # MDFillRoundFlatButton:
+    #     text:"retour"
+    #     color:"#FFFFFF"
+    #     md_bg_color:app.theme_cls.primary_color
+    #     pos_hint:{"center_x":.2, "center_y":.06}
+    #     on_release:root.parent.parent.pop()
+    MDIconButton:
+        id:eye
+        icon:"arrow-left-circle"
+        icon_size: dp(28)
+        theme_icon_color: "Custom"
+        icon_color:"blue"
+        pos_hint:{"center_x":.07, "center_y":.93}
+        on_release:root.parent.parent.pop()
+
+    
+
+    # MDRaisedButton:
+    #     text: "Open"
+    #     on_release: root.open()
+    #     pos_hint: {"center_x": .5, "center_y": .5}
+
+    # MDLabel:
+    #     id: date
+    #     text: ""
+    #     halign: "center"
+    #     valign: "center"
+    #     size_hint_y: 0.2
+    #     pos_hint: {"center_x": .5, "center_y": .3}
+
+<Connection>
+    MDLabel:
+        text: "connection"
+        font_size:dp(30)
+        bold:True
+        pos_hint:{"center_x":.5, "center_y":.9}
+        halign:"center"
+        color:app.theme_cls.primary_color
+        
+    MDLabel:
+        text: "veiller vous connecter"
+        pos_hint:{"center_x":.4, "center_y":.72}
+        halign:"center"
+        # color:app.theme_cls.primary_color
+    ChampText:
+        id:nom
+        size_hint_x:.8
+        hint_text: "nom"
+        pos_hint:{"center_x":.5, "center_y":.6}
+    # ChampText:
+    #     id:prenom
+    #     size_hint_x:.8
+    #     hint_text: "prenom"
+    #     pos_hint:{"center_x":.5, "center_y":.56}
+    ChampText:
+        id:code
+        size_hint_x:.8
+        hint_text: "mots de passe "
+        pos_hint:{"center_x":.5, "center_y":.46}
+        # on_release:
+        #     self.icon = "eye" if self.icon == "eye-off" else "eye-off"
+        #     text_field.password = False if text_field.password is True else True
+
+    MDTextButton:
+        text:"mot de passe oublier"
+        custom_color: app.theme_cls.primary_color
+        pos_hint:{"center_x":.3, "center_y":.35}
+        color: app.theme_cls.primary_color
+    Buttom:
+        id:btn
+        size_hint_x:.8
+        text:"suivant"
+        color:"#FFFFFF"
+        font_size:dp(20)
+        md_bg_color:app.theme_cls.primary_color
+        pos_hint:{"center_x":.5, "center_y":.15}
+        on_release:root.parent.parent.push("Information")
+    # MDFillRoundFlatButton:
+    #     text:"retour"
+    #     color:"#FFFFFF"
+    #     md_bg_color:app.theme_cls.primary_color
+    #     pos_hint:{"center_x":.2, "center_y":.06}
+    #     on_release:root.parent.parent.pop()
+    MDIconButton:
+        id:eye
+        icon:"arrow-left-circle"
+        icon_size: dp(28)
+        theme_icon_color: "Custom"
+        icon_color: "blue"
+        pos_hint:{"center_x":.07, "center_y":.93}
+        on_release:root.parent.parent.pop()
 
 
+<MotsDePasse>:
+    MDLabel:
+        text: "entre un mots de passe"
+        font_size:dp(30)
+        bold:True
+        pos_hint:{"center_x":.5, "center_y":.85}
+        halign:"center"
+        color:app.theme_cls.primary_color#"#333333"
+    # MDLabel:
+    #     text: "veiller vous connecter"
+    #     pos_hint:{"center_x":.4, "center_y":.72}
+    #     halign:"center"
+    #     # color:app.theme_cls.primary_color
+    # MDTextField:
+    #     id:mots1
+    #     size_hint_x:.8
+    #     hint_text: "nom"
+    #     helper_text_mode: "on_error"
+    #     mode: "round"
+    #     pos_hint:{"center_x":.5, "center_y":.66}
+    #     # line_color_normal:"blue"
+    #     line_anim:True
+    #     round_color_normal: "red"
+    ChampText:
+        id:motsA
+        size_hint_x:.8
+        hint_text: "entre un mots de passe"
+        pos_hint:{"center_x":.5, "center_y":.56}
+        password: True
+    MDIconButton:
+        icon: "eye"
+        pos_hint:{"center_x":.8, "center_y":.56}
+        on_release:
+            self.icon = "eye-off" if self.icon == "eye" else "eye"
+            motsA.password = False if motsA.password is True else True
+
+    ChampText:
+        id:motsB
+        size_hint_x:.8
+        hint_text: "confirmer mots de passe"
+        pos_hint:{"center_x":.5, "center_y":.46}
+        password: True
+    MDIconButton:
+        id:eye
+        icon: "eye"
+        pos_hint:{"center_x":.8, "center_y":.46}
+        on_release:
+            self.icon = "eye-off" if self.icon == "eye" else "eye"
+            motsB.password = False if motsB.password is True else True
+
+    Buttom:
+        id:btn
+        size_hint_x:.8
+        text:"suivant"
+        color:"#FFFFFF"
+        font_size:dp(20)
+        md_bg_color:app.theme_cls.primary_color
+        pos_hint:{"center_x":.5, "center_y":.1}
+        on_release:root.suivant()#root.parent.parent.push("Messages")
+    # MDFillRoundFlatButton:
+    #     text:"retour"
+    #     color:"#FFFFFF"
+    #     md_bg_color:app.theme_cls.primary_color
+    #     pos_hint:{"center_x":.2, "center_y":.06}
+    #     on_release:root.parent.parent.pop()
+    MDIconButton:
+        icon:"arrow-left-circle"
+        icon_size: dp(28)
+        theme_icon_color: "Custom"
+        icon_color:"blue"
+        pos_hint:{"center_x":.07, "center_y":.93}
+        on_release:root.parent.parent.pop()
+
+
+
+<Para@MDScreen>:
+    MDBoxLayout:
+        MDLabel:
+            text:'salut'
+    MDBottomSheet:
+        id:Bottom
+        type: "standard"
+        bg_color: "grey"
+        default_opening_height:dp(5)
+        size_hint_y: None
+        height: dp(100)
+        
+       
+        
+                # Add Contents here
+                
 <Click>:
     
-    on_press:root.parent.parent.parent.parent.parent.push("Personne")
-    
+    on_press:
+        root.parent.parent.parent.parent.parent.push("Personne")
+        
+        # root.renvoie(self.ids.tow.text)
+    id: clk
     #  root.parent.parent.unselected_all() ,
 #if root.parent.parent.parent.parent.ok  else None
 # ,root.parent.parent.parent.parent.unselected()
@@ -45,12 +379,16 @@ MenuPrincipal:
     on_parent:root.parente()#,print("parent11111111111111")
     id:tool
     size_hint:1,None
-    height:dp(60)
-    md_bg_color: .2,.7,.25,1
+    height:dp(75)
+    # adaptive_height:True
+    md_bg_color:app.theme_cls.primary_color#light
     elevation:2
     pos_hint_y:"top"
     MDScreen:
         id:tool_bar
+        size_hint:1,1
+        # radius: ("0dp","0dp","10dp","10dp")
+        md_bg_color:app.theme_cls.primary_color
         MDLabel:
             id:labele
             size_hint_x:None
@@ -58,33 +396,32 @@ MenuPrincipal:
             bold:True
             font_size:dp(20)
             text: "EGETRACO"
-            pos_hint: {"center_x": .3, "center_y": .5}
+            pos_hint: {"center_x": .32, "center_y": .3}
         MDIconButton:
             id:magnify
             icon: "magnify"
             pos_hint: {"center_x": .7, "center_y": .5}
-            on_press:root.tools("recherche")
+            on_press:root.tools("recherche"),root.parent.modes("recherche")#root.parent.Dialog()
         MDIconButton:
             id:vertical
             icon: "dots-vertical"
             pos_hint: {"center_x": .9, "center_y": .5}
             on_press:root.parent.callback(vertical)
-    MDCard:
+    MDScreen:
         id:tool_recherche
         size_hint:1,1#None
-        # height:dp(50)
-        md_bg_color: .3,.8,.25,1
-        elevation:2
-        radius:(dp(0), dp(0), dp(0), dp(0))
+        md_bg_color:app.theme_cls.primary_color
+        elevation:4
         MDIconButton:
             theme_icon_color: "Custom"
             icon_color:1,1,1,1
             icon:"close"
-            pos_hint: {"center_x": 0.1, "center_y": .5}
-            on_press:root.tools("tool_bar")
+            pos_hint: {"center_x": .07, "center_y": .5}
+            on_press:root.tools("tool_bar"),root.parent.modes("tool_bar")#,
+            # pos_hint:{"center_x":.1,"center_y":.5}
         MDTextField:
             id:recherche
-            size_hint:1, .5
+            size_hint:.75, .5
             # width: self.width*9/10
             mode: "round"
             icon_right: "magnify"
@@ -94,26 +431,79 @@ MenuPrincipal:
             icon_right_color_focus: "#888888"
             text_color_focus: "#444444"
             pos_hint: { "center_y": .5}
-
+            on_text: root.parent.set_recherche(self.text)
+            pos_hint:{"center_x":.5,"center_y":.5}
         MDLabel:
             size_hint_x:None
             width: dp(10)
+            pos_hint:{"center_x":.9,"center_y":.5}
 <Messages>:
     id:mesg
     orientation: 'vertical'
-    on_parent:root.parente()#,tool.parente()
+    on_parent:root.parente()#,pope.open()#,tool.parente()
+    # MDFloatLayout:
+    #     MDBoxLayout:
+    #         orientation: 'vertical'
     Entete:
+        id:"entete"
+        # MDBoxLayout:
+    
+    # MDBoxLayout:
+    #     orientation: 'vertical'
+    #     MDScreen:
+    #         size_hint:1,None
+    #         height:dp(90)
+    RecycleView:
+        id:View
+        viewclass : 'MessageItem'
+        RecycleBoxLayout:
+            default_size: None, dp(60)
+            default_size_hint: 1, None
+            size_hint_y: None
+            height: self.minimum_height
+            orientation: 'vertical'
+            spacing:dp(1)
 
-    ScrollView:
-        do_scroll_x: False
-        do_scroll_y: True
-        effect_cls: "ScrollEffect"
-        smooth_scroll_end: dp(10)
-        MDBoxLayout:
-            id: list_de_messages
-            orientation: "vertical"
-            size_hint:1, None
-            adaptive_height: True
+
+
+
+<MessageItem>
+    id:MessageItem
+    # Personnes:<Personne>
+    size_hint_y:None
+    height:dp(56)
+    on_release:
+        root.parent.parent.parent.parent.parent.push("Personne")
+        # root.renvoie(self.ids.tow.text)
+        # root.ids.entete.root.go()
+        root.parent.parent.parent.parent.parent.ids.ss.children[0].messagee(self.ids.tow.text)
+        # root.okk()
+            
+        
+    FitImag:
+        size_hint: None, None
+        size: '54dp','54dp'
+        radius:dp(27)
+        source:root.image
+        on_release:
+            root.parent.parent.parent.afficer_image(root.nom, root.image)
+    TwoLineListItem:
+        id:tow
+        text: root.nom
+        secondary_text:root.message
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_x: .2
+        Label:
+            text:root.date
+            color: "blue" #if root.vue == True else None 
+        MDCard:
+            size_hint: None, None
+            size: '28dp','28dp'
+            radius:dp(14)
+            md_bg_color: "blue"
+            Label:
+                text:root.nmessage
 
 <Message>:
     id:mesg
@@ -171,43 +561,44 @@ MenuPrincipal:
             on_selected: root.on_selected(*args)
             on_unselected: root.on_unselected(*args)
             on_selected_mode: root.set_selection_mode(*args)
-            
 
-            # self.unselected_all(),root.parent.parent.push("Personne") if root.ok  else None
-            
 
 <MagicButton@MDSelectionList>
-<LesMessage>:
-    FitImage:
-        source:""
-        size_hint_x: .3
-    MDBoxLayout:
-        orientation: 'vertical'
-        MDLabel:
-            text: root.nom
-            font_size:dp(20)
-            # color:
-        MDLabel:
-            text: "text"
-            # color:
-    MDBoxLayout:
-        orientation: 'vertical'
-        size_hint_x:.1
-        MDLabel:
-            text: "text"
-            # color:
-        MDLabel:
-            text: "text"
+# <LesMessage>:
+#     on_size:root.parente
+#     FitImage:
+#         source:""
+#         size_hint_x: .3
+#     MDBoxLayout:
+#         orientation: 'vertical'
+#         MDLabel:
+#             text: root.nom
+#             font_size:dp(20)
+#             # color:
+#         MDLabel:
+#             text: "text"
+#             # color:
+#     MDBoxLayout:
+#         orientation: 'vertical'
+#         size_hint_x:.1
+#         MDLabel:
+#             text: "text"
+#             # color:
+#         MDLabel:
+#             text: "text"
             # color:
 <LaCart@MDCard>:
+<FitImag@ButtonBehavior+FitImage>
 
 <Personne>:
     orientation: 'vertical'
     on_parent:root.parente()
+    # on_focus:root.parente()
     MDScreen:
         size_hint_y: None
         height: dp(60)
         md_bg_color:.2,.7,.25,1
+        # md_bg_color:app.theme_cls.primary_dark
         LaCart:
             size_hint: None, None
             height:dp(60)
@@ -219,63 +610,65 @@ MenuPrincipal:
                 icon_size: dp(20)
                 theme_icon_color: "Custom"
                 icon_color:1,1,1,1
-                on_press:root.parent.parent.pop()
-            FitImage:
+                on_press:root.parent.parent.pop()#,root.cl()
+            FitImag:
                 size_hint: None, None
                 height:dp(50)
                 width: dp(50)
                 radius:dp(25)
-                source:"image/0f8069cb4af6b4d61547e505691762e4.jpg"
-                # on_touch_up:root.parent.parent.pop()
+                radius:(self.height/2)
+                source:root.photo#"image/0f8069cb4af6b4d61547e505691762e4.jpg"
+                on_press:
+                    root.parent.parent.push("Profile")
+                    root.parent.parent.ids.profile.children[0].tof(root.photo,root.nom)
+        MDLabel:
+            size_hint_x:None
+            width:dp(120)
+            # md_bg_color:"blue"
+            text: root.nom
+            font_size:dp(18)
+            pos_hint: {'center_x': 0.6,'center_y': 0.3}
+
         MDIconButton:
             icon: "phone"
             icon_size: dp(20)
             theme_icon_color: "Custom"
             icon_color:1,1,1,1
-            pos_hint: {'center_x': 0.7,'center_y': 0.5}
+            pos_hint: {'center_x': 0.79,'center_y': 0.5}
         MDIconButton:
             icon: "dots-vertical"
             icon_size: dp(20)
             theme_icon_color: "Custom"
             icon_color:1,1,1,1
-            pos_hint: {'center_x': 0.88,'center_y': 0.5}
+            pos_hint: {'center_x': 0.94,'center_y': 0.5}
     FloatLayout:
         ScrollView:
             do_scroll_x: False
             do_scroll_y: True
-            effect_cls: "ScrollEffect"
+            scroll_y: 0
+            # effect_cls: "ScrollEffect"
+            # scroll_to ( widget , padding = 10 , animate = True ) 
             smooth_scroll_end: dp(10)
             MDBoxLayout:
                 orientation:'vertical'
                 id:Les_Message
                 size_hint:1, None
                 adaptive_height:True
-                # md_bg_color:"blue"
-                spacing:dp(10)
-            
-                # MDLabel:
-                #     md_bg_color:"red"
-                #     size_hint_y: None
-                #     # height: self.texture_size[1]
-                #     adaptive_height:True
-                #     text_size: None, None
-                #     padding: 10, 10
-                #     text:
-                #         'really some amazing text\n' * 50
-                #     max_height:dp(10)
-            # MDSelectionList:
-            #     id: LesMessages
-            #     # viewclass: 'LesMessage'
-            #     spacing: "2dp"
-            #     # on_touch_up:root.parent.parent.push("Personne")
-            #     # overlay_color: root.overlay_color[:-1] + [.2]
-            #     # icon_bg_color: root.overlay_color
-            #     # on_selected: root.on_selected(*args)
-            #     # on_unselected: root.on_unselected(*args)
-            #     # on_selected_mode: root.set_selection_mode(*args)
+                spacing:dp(2)
+                padding:('6dp', '0dp', '6dp', '0dp') 
+        # RecycleView:
+        #     id:Recycl
+        #     viewclass : 'LesMessage'
+        #     RecycleBoxLayout:
+        #         default_size: None, dp(5)
+        #         default_size_hint: 1, None
+        #         size_hint_y: None
+        #         height: self.minimum_height
+        #         orientation: 'vertical'
+        #         spacing:dp(10)
         MDCard:
             size_hint_y: None
-            height:dp(35)
+            height:dp(60)
             # width: dp(100)
             md_bg_color:0,0,0,.1
             pos_hint_y:{"bottom"}
@@ -284,119 +677,242 @@ MenuPrincipal:
                 icon_size: dp(20)
                 theme_icon_color: "Custom"
                 icon_color:"green"
+                icon_size:dp(35)
                 # on_press:root.parent.parent.pop()
                 pos_hint:{'center_y': 0.5}
             MDScreen:
                 MDTextField:
+                    id:message_entrer
                     hint_text: "Round mode"
                     mode: "round"
-                    size_hint: None,None
-                    height: dp(10)
-                    width: dp(200)
+                    size_hint: 1,None
+                    height: dp(100)
+                    # width: dp(200)
+                    adaptive_width:False
+                    max_width: dp(200)
                     hint_text_color_focus: "red"
-                    pos_hint:{"center_y":.5}
+                    pos_hint:{"center_x":.5,"center_y":.5}
                     multiline: True
-                    # adaptive_height:True
-                    # adaptive_width:True
-                    pos_hint:{"center_x":.5,"center_y":.4}
+                    max_height: dp(50)
+                    # pos_hint:{"center_x":.5,"center_y":.4}
                     # size_hint_max_x: .9
             MDIconButton:
                 icon: "send-circle"
                 icon_size: dp(20)
                 theme_icon_color: "Custom"
                 icon_color:"green"
-                # on_press:root.parent.parent.pop()
+                icon_size:dp(35)
+                on_press:
+                    root.envoie(message_entrer.text)
+                    # message_entrer.text = 0
                 pos_hint:{'center_y': 0.5}
-            
-
-        
-
-# Label:
-#         size_hint_y: None
-#         height: self.texture_size[1]
-#         text_size: self.width, None
-#         padding: 10, 10
-#         text:
-#             'really some amazing text\n' * 100
+    # <Mois@MDBoxLayout>
 
 
-# ,on_touch_move =print("sa")
+
+<LesMessage>:
+    size_hint: 1, None
+    adaptive_height:True
+    md_bg_color:"red"
+    MDLabel:
+    MDBoxLayout:
+        md_bg_color:"blue"
+        size_hint:None,None
+        adaptive_height:True
+        width:dp(200)
+        radius: dp(10)
+        padding:('8dp', '8dp', '8dp', '8dp')
+        MDLabel:
+            text:str(root.message)
+            size_hint:None,None
+            adaptive_height:True
+            width:dp(180)
+    
+
+
+
 
 <Profile>:
+    orientation: 'vertical'
+    MDScreen:
+        id:scrn
+        size_hint: 1, None
+        height: dp(100)
+        md_bg_color:.2,.7,.25,1
+        MDIconButton:
+            icon: "arrow-left"
+            user_font_size:dp(20)
+            # icon_size: dp(20)
+            # theme_icon_color: "Custom"
+            # icon_color:0,241,104
+            pos_hint: {'center_x': 0.06,'center_y': 0.7}
+            on_press:
+                root.parent.parent.pop()
+                root.parent.parent.current_heroes == ["hero"]
+        # MDScreen:
+        FitImag:
+            size_hint:None,.85
+            width: self.height
+            # md_bg_color:"cadetblue"
+            source:root.photo#"image/images (5).jpg"
+            pos_hint: {'center_x': 0.3,'center_y': 0.5}
+            radius:(self.height/2)
+                # 
+
+
+        MDLabel:
+            size_hint_x: None
+            # adaptive_width:True
+            width:dp(140)
+            text: root.nom
+            pos_hint: {'center_x': 0.7,'center_y': 0.55}
+            font_size:dp(20)
+            # md_bg_color:"blue"
+        MDLabel:
+            size_hint_x: None
+            adaptive_width:True
+            text: "nom"
+            pos_hint: {'center_x': 0.7,'center_y': 0.35}
+           
+    MDSeparator:
+        orientation:'horizontal'
+        height: "2dp"
     ScrollView:
         do_scroll_x:False
         do_scroll_y:True
         effect_cls: "ScrollEffect"
         smooth_scroll_end: dp(10)
+        # on_scroll_to_top:print("top")
+
         MDBoxLayout:
             orientation: "vertical"
             size_hint: 1, None
             adaptive_height: True
+            TwoLineListItem:
+                text: "numero de telehones"
+                secondary_text: "non definie"
+            TwoLineListItem:
+                text: "adress emails"
+                secondary_text: "non definie"
+            TwoLineListItem:
+                text: "numero de telehones"
+                secondary_text: "non definie"
+            MDLabel:
+                text: ""
+                size_hint_y:None
+                height:"20dp"
             MDBoxLayout:
+                orientation: "vertical"
                 size_hint: 1, None
-                height:dp(60)
-                md_bg_color:.1,.1,.1,.2
-                padding: (10, 10)
-                MDLabel:
-                    text:"mode nuit"
-                MDSwitch:
-                    color_active: "blue"
-                    # color_inactive: "blue"
-                    # icon_active: "check"
-                    # icon_inactive: "close"
-                    # icon_active_color: "white"
-                    # icon_inactive_color: "grey"
-                    padding:(dp(10),dp(10))
-            MDSeparator:
-                orientation:'horizontal'
-                height: "2dp"
+                adaptive_height: True
+                spacing: '10dp'
+                padding: ('0dp', '10dp', '0dp', '0dp')
+                MDFillRoundFlatButton:
+                    text:"bloquer"
+                    size_hint_x: .8
+                    text_color: "BB0000"
+                    font_size:dp(20)
+                    # md_bg_color:("#f53826")
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                MDFillRoundFlatButton:
+                    size_hint_x: .8
+                    text:"signaler"
+                    text_color:  "BB0000"
+                    font_size:dp(20)
+                    # text_color: "red"
+                    # md_bg_color:("#f53826")
+                    # text_color: "white"
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                MDFillRoundFlatButton:
+                    text:"suprimer"
+                    size_hint_x: .8
+                    text_color:  "BB0000"
+                    font_size:dp(20)
+                    # md_bg_color:("#f53826")
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
 
-            # MDScreen:
-            #     size_hint:1, None
-            #     height:dp(150)
-            #     # pos_hint:{'center_x':.9, 'center_y':.5}
-            #     # md_bg_color: "green"
-            #     MDLabel:
-            #         size_hint:None, None
-            #         height:dp(30)
-            #         width:dp(150)
-            #         text:"parametre"
-            #         font_size:dp(22)
-            #         bold:True
-            #         pos_hint:{'center_x':.7, 'center_y':.8}
-            #         # md_bg_color: "red"
-            #     MDIconButton:
-            #         icon:"arrow-left"
-            #         on_press:root.parent.parent.pop()
-            #         pos_hint:{'center_x':.1, 'center_y':.9}
-            #     FitImage:
-            #         size_hint:None, None
-            #         height:dp(100)
-            #         width:dp(100)
-            #         pos_hint:{'center_x':.2, 'center_y':.4}
-            #         source:"0f8069cb4af6b4d61547e505691762e4.jpg"
-            #         radius:dp(50)
-            #         # md_bg_color: "red"
-            #     MDLabel:
-            #         size_hint:None, None
-            #         height:dp(30)
-            #         width:dp(150)
-            #         text:"Nom"
-            #         pos_hint:{'center_x':.7, 'center_y':.25}
-            #         # md_bg_color: "red"
-            #     MDLabel:
-            #         size_hint:None, None
-            #         height:dp(30)
-            #         width:dp(150)
-            #         text: "prenom"
-            #         pos_hint:{'center_x':.7, 'center_y':.1}
-            #         # md_bg_color: "red"
+            # TwoLineListItem:
+            #     text: "numero de telehones"
+            #     secondary_text: "non definie"
+            # TwoLineListItem:
+            #     text: "numero de telehones"
+            #     secondary_text: "non definie"
 
-            # MDSeparator:
-            #     orientation:'horizontal'
-            #     height: "2dp"
-            
-                   
+
+    # ScrollView:
+    #     do_scroll_x:False
+    #     do_scroll_y:True
+    #     effect_cls: "ScrollEffect"
+    #     smooth_scroll_end: dp(10)
+    #     MDBoxLayout:
+    #         orientation: "vertical"
+    #         size_hint: 1, None
+    #         adaptive_height: True
+    #         MDBoxLayout:
+    #             size_hint: 1, None
+    #             height:dp(60)
+    #             md_bg_color:.1,.1,.1,.2
+    #             padding: (10, 10)
+    #             MDLabel:
+    #                 text:"mode nuit"
+    #             MDSwitch:
+    #                 color_active: "blue"
+    #                 # color_inactive: "blue"
+    #                 # icon_active: "check"
+    #                 # icon_inactive: "close"
+    #                 # icon_active_color: "white"
+    #                 # icon_inactive_color: "grey"
+    #                 padding:(dp(10),dp(10))
+    #         MDSeparator:
+    #             orientation:'horizontal'
+    #             height: "2dp"
+
+    #         # MDScreen:
+    #         #     size_hint:1, None
+    #         #     height:dp(150)
+    #         #     # pos_hint:{'center_x':.9, 'center_y':.5}
+    #         #     # md_bg_color: "green"
+    #         #     MDLabel:
+    #         #         size_hint:None, None
+    #         #         height:dp(30)
+    #         #         width:dp(150)
+    #         #         text:"parametre"
+    #         #         font_size:dp(22)
+    #         #         bold:True
+    #         #         pos_hint:{'center_x':.7, 'center_y':.8}
+    #         #         # md_bg_color: "red"
+    #         #     MDIconButton:
+    #         #         icon:"arrow-left"
+    #         #         on_press:root.parent.parent.pop()
+    #         #         pos_hint:{'center_x':.1, 'center_y':.9}
+    #         #     FitImage:
+    #         #         size_hint:None, None
+    #         #         height:dp(100)
+    #         #         width:dp(100)
+    #         #         pos_hint:{'center_x':.2, 'center_y':.4}
+    #         #         source:"0f8069cb4af6b4d61547e505691762e4.jpg"
+    #         #         radius:dp(50)
+    #         #         # md_bg_color: "red"
+    #         #     MDLabel:
+    #         #         size_hint:None, None
+    #         #         height:dp(30)
+    #         #         width:dp(150)
+    #         #         text:"Nom"
+    #         #         pos_hint:{'center_x':.7, 'center_y':.25}
+    #         #         # md_bg_color: "red"
+    #         #     MDLabel:
+    #         #         size_hint:None, None
+    #         #         height:dp(30)
+    #         #         width:dp(150)
+    #         #         text: "prenom"
+    #         #         pos_hint:{'center_x':.7, 'center_y':.1}
+    #         #         # md_bg_color: "red"
+
+    #         # MDSeparator:
+    #         #     orientation:'horizontal'
+    #         #     height: "2dp"
+
+
 
 <Plus@MDDropdownMenu>:
     viewclass:"OneLineListItem"
@@ -422,124 +938,203 @@ MenuPrincipal:
                 text:'text'
     ScrollView:
         do_scroll_x:False
-        do_scroll_y:True       
+        do_scroll_y:True
         MDBoxLayout:
             size_hint_y:None
             adaptive_height: True
-        
 
-
+<LScreen@ButtonBehavior+MDScreen>
 <Parametre>:
-    MDBoxLayout:
-        orientation: 'vertical'
-        md_bg_color:app.theme_cls.primary_color
-        MDScreen:
-            size_hint:1, None
-            height:dp(40)
-            md_bg_color:app.theme_cls.primary_color
-            # opacity:.5
-            MDLabel:
-                size_hint:None, None
-                height:dp(30)
-                width:dp(110)
-                text:"parametre"
-                font_size:dp(22)
-                bold:True
-                pos_hint:{'center_x':.7, 'center_y':.3}
-                # md_bg_color: "red"
-            MDIconButton:
-                icon:"arrow-left"
-                on_press:root.parent.parent.pop()
-                pos_hint:{"center_x":.1, "center_y":.5}
-        ScrollView:
-            do_scroll_x:False
-            do_scroll_y:True
-            # effect_cls: ScrollEffect
-            effect_cls: "ScrollEffect"
-            smooth_scroll_end: dp(10)
-            # ScrollEffect:True
-            MDBoxLayout:
-                orientation: "vertical"
-                # md_bg_color:app.theme_cls.primary_color
-                size_hint: 1, None
-                adaptive_height: True
-                MDScreen:
-                    size_hint:1, None
-                    height:dp(110)
-                    md_bg_color:app.theme_cls.primary_color
-                    # MDLabel:
-                    #     size_hint:None, None
-                    #     height:dp(30)
-                    #     width:dp(150)
-                    #     text:"profile"
-                    #     font_size:dp(22)
-                    #     bold:True
-                    #     pos_hint:{'center_x':.8, 'center_y':.8}
-                    #     # md_bg_color: "red"
-                    # MDIconButton:
-                    #     icon:"arrow-left"
-                    #     on_press:root.parent.parent.pop()
-                    #     pos_hint:{"center_x":.1, "center_y":.9}
-                    #     # pos_hint:{'center_x':.1, 'center_y':.9}
-                    FitImage:
-                        size_hint:None, None
-                        height:dp(100)
-                        width:dp(100)
-                        pos_hint:{'center_x':.3, 'center_y':.5}
-                        source:"image/0f8069cb4af6b4d61547e505691762e4.jpg"
-                        radius:dp(50)
-                        # md_bg_color: "red"
-                    MDLabel:
-                        size_hint:None, None
-                        height:dp(30)
-                        width:dp(100)
-                        text:"Nom"
-                        pos_hint:{'center_x':.75, 'center_y':.55}
-                        # md_bg_color: "red"
-                    MDLabel:
-                        size_hint:None, None
-                        height:dp(30)
-                        width:dp(100)
-                        text: "prenom"
-                        pos_hint:{'center_x':.8, 'center_y':.35}
-                        # md_bg_color: "red"
+    on_parent:root.le_parent()
+    # MDBoxLayout:
+    orientation: 'vertical'
+    MDFloatLayout:
+        MDBoxLayout:
+            orientation: 'vertical'
+            # z_index:600
+            # md_bg_color:app.theme_cls.primary_color
+            MDScreen:
+                size_hint:1, None
+                height:dp(50)
+                md_bg_color:app.theme_cls.primary_color
+                # opacity:.5
+                MDLabel:
+                    size_hint:None, None
+                    height:dp(30)
+                    width:dp(110)
+                    text:"parametre"
+                    font_size:dp(22)
+                    bold:True
+                    pos_hint:{'center_x':.4, 'center_y':.3}
+                    # md_bg_color: "red"
+                MDIconButton:
+                    icon:"arrow-left"
+                    on_press:root.parent.parent.pop()
+                    pos_hint:{"center_x":.1, "center_y":.5}
+                MDIconButton:
+                    icon:"moon-waxing-crescent" if app.theme_cls.theme_style == "Light" else  "white-balance-sunny"
+                    pos_hint:{"center_x":.9, "center_y":.5}
+                    user_font_size:dp(20)
+                    on_press:app.theme()
+            ScrollView:
+                do_scroll_x:False
+                do_scroll_y:True
+                effect_cls: "ScrollEffect"
+                smooth_scroll_end: dp(10)
                 MDBoxLayout:
                     orientation: "vertical"
+                    # md_bg_color:app.theme_cls.primary_color
                     size_hint: 1, None
                     adaptive_height: True
-                    md_bg_color:"#FFFFFF"
-                    MDSeparator:
-                        orientation:'horizontal'
-                        height: "2dp"
-                    MDSeparator:
-                        orientation:'horizontal'
-                        height: "3dp"
-                    TwoLineListItem:
-                        text: "numero de telehones"
-                        secondary_text: "non definie"
-                    TwoLineListItem:
-                        text: "adress emails"
-                        secondary_text: "non definie"
-                    TwoLineListItem:
-                        text: "adress locales"
-                        secondary_text: "non definie"
-                    TwoLineListItem:
-                        text: " les amies "
-                        secondary_text: "les amies "      
-                    TwoLineListItem:
-                        text: "notifications "
-                        secondary_text: "notifications  des messages" 
-                    TwoLineListItem:
-                        text: "discutions "
-                        secondary_text: "nom definie "   
+                    MDScreen:
+                        size_hint:1, None
+                        height:dp(110)
+                        md_bg_color:app.theme_cls.primary_color
+                        MDIconButton:
+                            icon:"lead-pencil"
+                            pos_hint:{"center_x":.9, "center_y":.6}
+                            user_font_size:dp(20)
+                            # pos_hint:{'center_x':.1, 'center_y':.9}
+                            on_press:root.Dialog()
+                        FitImag:
+                            size_hint:None, None
+                            height:dp(100)
+                            width:dp(100)
+                            pos_hint:{'center_x':.3, 'center_y':.5}
+                            source:"image/0f8069cb4af6b4d61547e505691762e4.jpg"
+                            radius:dp(50)
+                            on_press:root.Pope()
+                            # on_press:root.files()
+                            # md_bg_color: "red"
+                        MDLabel:
+                            size_hint:None, None
+                            height:dp(30)
+                            width:dp(100)
+                            text:root.nom
+                            pos_hint:{'center_x':.75, 'center_y':.55}
+                            # md_bg_color: "red"
+                        MDLabel:
+                            size_hint:None, None
+                            height:dp(30)
+                            width:dp(100)
+                            text:root.prenom
+                            pos_hint:{'center_x':.8, 'center_y':.35}
+                            # md_bg_color: "red"
+                    # MDFileManager:
+                    #     size_hint: 1, None
+                    #     height: dp(200)
+                    #     preview:True
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        size_hint: 1, None
+                        adaptive_height: True
+                        # md_bg_color:"#FFFFFF"
+                        MDSeparator:
+                            orientation:'horizontal'
+                            height: "2dp"
+                        MDSeparator:
+                            orientation:'horizontal'
+                            height: "3dp"
+                        TwoLineListItem:
+                            text: "numero de telehones"
+                            secondary_text: root.numero_de_telephone
+                        TwoLineListItem:
+                            text: "adress emails"
+                            secondary_text:root.adress_email
+                        TwoLineListItem:
+                            text: "adress locales"
+                            secondary_text:root.adress_local
+                        TwoLineListItem:
+                            text: " les amies "
+                            secondary_text: "les amies "      
+                        TwoLineListItem:
+                            text: "notifications "
+                            secondary_text: "notifications  des messages" 
+                        MDLabel:
+                            size_hint_y:None
+                            height: "25dp"
+                        MDFillRoundFlatButton:
+                            spacing:[0,20]
+                            text:"se deconnecter"
+                            size_hint_x: .8
+                            # text_color:  "BB0000"
+                            font_size:dp(20)
+                            # md_bg_color:("#f53826")
+                            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                        MDLabel:
+                            size_hint_y:None
+                            height: "25dp"
+                        # TwoLineListItem:
+                        #     text: "discutions "
+                        #     secondary_text: "nom definie "   
 
-                    TwoLineListItem:
-                        text: "discutions "
-                        secondary_text: "nom definie "  
+                        # TwoLineListItem:
+                        #     text: "discutions "
+                        #     secondary_text: "nom definie "  
 
-                    TwoLineListItem:
-                        text: "discutions "
-                        secondary_text: "nom definie "  
-                    MDSeparator:
-                        orientation:'horizontal'
-                        height: "3dp"
+                        # TwoLineListItem:
+                        #     text: "discutions "
+                        #     secondary_text: "nom definie "  
+                        # MDSeparator:
+                        #     orientation:'horizontal'
+                        #     height: "3dp"
+<Inputtext@MDTextField>:
+    size_hint_x: .8
+    pos_hint: {'center_x': 0.5}
+    text_color_normal:"black"
+    ine_color_normal:"blue"
+    line_color_focus:"blue"
+    text_color_focus:"black"
+
+<Modifications>:
+    orientation: 'vertical'
+    MDScreen:
+        size_hint_y: None
+        height:dp(35)
+        # md_bg_color: .2,.7,.25,1
+        MDIconButton:
+            id:anuler
+            icon:"close"
+            theme_icon_color: "Custom"
+            pos_hint: {"center_x": 0.1, "center_y": .5}
+            on_press:root.parent.parent.pop()
+        MDIconButton:
+            id:anuler
+            icon:"check-bold"
+            theme_icon_color: "Custom"
+            pos_hint: {"center_x": 0.9, "center_y": .5}
+    ScrollView:
+        do_scroll_x:False
+        do_scroll_y:True
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            adaptive_height: True
+            MDScreen:
+                size_hint_y:None
+                height:dp(120)
+            Inputtext:
+                id:nom
+                hint_text: "nom"
+                text: "root.nom"
+            Inputtext:
+                id:prenom
+                hint_text: "prenom"
+                text: "root.prenom"
+            Inputtext:
+                id:numero_de_telephone
+                hint_text: "numero de telephone"
+                text: "root.numero_de_telephone"
+            Inputtext:
+                id:adress_email
+                hint_text: "adress email"
+                text: "root.adress_email"
+            Inputtext:
+                hint_text: "adress locale"
+                text: "root.adress_locale"
+            Inputtext:
+                hint_text: "No helper text"
+                text: "required = True"
+            Inputtext:
+                hint_text: "No helper text"
+                text: "required = True"
